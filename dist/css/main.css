@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: .9;
+  opacity: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -141,11 +141,24 @@ main {
   min-height: calc(100vh - 56px); }
   main .icons {
     margin-top: 1rem; }
-    main .icons a {
+    main .icons .itch {
       padding: 0.4rem; }
-      main .icons a:hover {
-        color: #28c4eb;
+      main .icons .itch:hover {
+        color: #fa5c5c;
         transition: all 0.2s ease-out; }
+    main .icons .github {
+      padding: 0.4rem; }
+      main .icons .github:hover {
+        color: #333;
+        transition: all 0.2s ease-out; }
+    main .icons .linkedin {
+      padding: 0.4rem; }
+      main .icons .linkedin:hover {
+        color: #007bb5;
+        transition: all 0.2s ease-out; }
+    main .icons .file:hover {
+      color: #28c4eb;
+      transition: all 0.2s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -154,8 +167,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio'
- 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-img {
     grid-area: bioimage;
@@ -260,11 +272,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage'
- 'bio'
- 'job1'
- 'job2'
- 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

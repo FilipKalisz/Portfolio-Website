@@ -56,9 +56,31 @@ main {
     .icons {
         margin-top: 1rem;
 
-        a {
+        .itch {
             padding: 0.4rem;
-
+            
+            &:hover{
+                color: #fa5c5c;
+                @include easeOut();
+            }
+        }
+        .github {
+            padding: 0.4rem;
+            
+            &:hover{
+                color: #333;
+                @include easeOut();
+            }
+        }
+        .linkedin {
+            padding: 0.4rem;
+            
+            &:hover{
+                color: #007bb5;
+                @include easeOut();
+            }
+        }
+        .file {
             &:hover{
                 color: $secondary-colour;
                 @include easeOut();
