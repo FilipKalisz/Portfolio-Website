@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lexend:wght@100..900&display=swap');
+:root
+{
+    --main-colour:#4177AF;
+    --alternate-colour:#48364f;
+    --alternate-colour-ligher:#705e76;
+    --shadow-black-100:0 5px 15px rgba(0, 0, 0, 0.2);
+    --black-900:#000;
+    --black-400:#646f87;
+    --black-100:#f7f7f7;
+    --white:#fff;
+    --black-alpha-100:rgba(0, 0, 0, 0.5);
+}
+body
+{
+    font-family: "Lexend", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    overflow-x: hidden;
+    font-style: normal;
+    background-color: var(--white);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+ul
+{
+    list-style: none;
+}
+img
+{
+    vertical-align: middle;
+}
+.container
+{
+    /* max-width: 1140px; */
+    max-width: 90vw; 
+    margin: auto;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between
+{
+    justify-content: space-between;
+}
+.align-items-centre
+{
+    align-items: center;
+}
+.navbar
+{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 25px;
+    transition: all 0.5s ease;
+}
+.navbar .sticky
+{
+    padding: 12px 25px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-black-100);
+}
+.navbar .logo a
+{
+    font-size: 24px;
+    color: var(--main-colour);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.navbar .menu .nav-item
+{
+    display: inline-block;
+    position: relative;
+    margin-left: 36px;
+}
+.navbar .menu .nav-item .nav-link
+{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+.navbar .sticky .menu .nav-item .nav-link
+{
+    color: var(--alternate-colour);
+}
+.navbar .nav-item .nav-link span
+{
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out 0s;
+}
+.navbar .nav-item .nav-link span::before
+{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    left: 110%;
+}
+.navbar .nav-item .nav-link span::after
+{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    left: 140%;
+}
+.navbar.sticky .nav-item a span, .navbar.sticky .nav-item a span::before, .navbar.sticky .nav-item a span::after
+{
+    background-color: var(--alternate-colour);
+}
+.navbar .nav-item > .nav-link.active span
+{
+    background-color: var(--main-colour);
+}
+.navbar .nav-item > .nav-link.active span::before
+{
+    background-color: var(--main-colour);
+}
+.navbar .nav-item > .nav-link.active span::after
+{
+    background-color: var(--main-colour);
+}
+.navbar .nav-item > .nav-link.active span,.navbar .nav-item:hover > .nav-link span
+{
+    opacity: 1;
+    visibility: visible;
+    width: 60%;
+}
+.navbar .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before
+{
+    width: 20%;
+}
+.navbar .nav-item > .nav-link.active span::after,.navbar .nav-item:hover > .nav-link span::after
+{
+    width: 15%;
+}
+.home-section
+{
+    position: relative;
+    background-color: var(--black-100);
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+.home-section .home-text, .home-section .home-image
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 25px;
+}
+.home-section .home-text h4
+{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--main-colour);
+}
+.home-section .home-text h1
+{
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--alternate-colour);
+}
+.home-section .home-text span
+{
+    color: var(--alternate-colour);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    display: block;
+    margin-top: 15px;
+}
+.home-section .home-text p
+{
+    font-size: 16px;
+    color: var(--alternate-colour-ligher);
+    font-weight: 24px;
+    margin-top: 15px;
+}
+.home-section .home-image .img-box img
+{
+    position: relative;
+    width: 100%;
+    z-index: 789;
+}
+.header-hero-shape
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;    
+}
+.header-hero-shape::before
+{
+    position: absolute;
+    content: '';
+    width: 1000%;
+    height: 100%;
+    background-color: var(--main-colour);
+    transform: skewX(20deg);
+    top: 0;
+    left: 0;
+}
